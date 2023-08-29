@@ -1,0 +1,130 @@
+body {
+    background: #232427;
+    font-family: 'Righteous', cursive;
+  }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+  
+.cf:after {
+  clear: both;
+}
+  
+.cf {
+  *zoom: 1;
+}
+  
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 50px auto;
+  width: 800px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+  font-family: 'Righteous', cursive;
+}
+    
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+  
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+}		
+  
+.menu li:hover {
+  background: #e74c3c;
+}		
+  
+.menu  li  a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+  
+.menu > li:hover,
+.menu > li:hover, li {
+  opacity: 1;
+  visibility: visible;
+}		
+  
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+  
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+  
+.title {
+  color: #e74c3c;
+  text-align: center;
+  justify-content: center;
+  font-size: 65px;
+  font-family: 'Righteous', cursive;
+  margin-top: 5px;
+}
+
+.button {
+  padding: 14px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px #E5766B;
+  background-color: white;
+  color: black;
+  border: 2px solid #e74c3c;
+}
+  
+.button:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+  
+.button:active {
+  background-color: #e74c3c;
+  box-shadow: 0 5px #E5766B;
+  transform: translateY(4px);
+}
+  
+.arround-new-post {
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 40px;
+}
+  
+.arround-list {
+  flex-direction: column;
+  color: #fff;    
+}
+  
+select {
+  margin-right: 10px;
+  font-family: 'Righteous', cursive;
+}
+  
+textarea {
+  margin-top: 15px;
+}
+  
+input {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}

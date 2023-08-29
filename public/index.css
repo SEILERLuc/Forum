@@ -1,0 +1,144 @@
+body {
+    background: #232427;
+    font-family: 'Righteous', cursive;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+  
+.cf:after {
+  clear: both;
+}
+  
+.cf {
+  *zoom: 1;
+}
+  
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  
+.menu {		
+  margin: 50px auto;
+  width: 800px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+}
+  
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+  
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  font-size: 14px;
+}		
+  
+.menu li:hover {
+  background: #e74c3c;
+}		
+  
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+  
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+  
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+  
+.arroundpost {
+  background-color: #34495e;
+  position: relative;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 5px;    
+  border: 1px solid #e74c3c;
+  justify-content: space-evenly;
+  margin-left: 20%;
+  margin-right: 20%;
+  align-items: center;
+  align-content: center;
+  opacity: 0.8;
+  z-index: -10;
+}
+  
+.post {
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+  
+.formulaire {
+  display: flex;
+  justify-content: center;
+}
+  
+form {
+  color: #fff;
+}
+  
+.user-name {
+  width: 150px;
+  height: 30px;
+  background-color: #e74c3c;
+  color: #fff;
+  align-items: center;
+  align-content: center;
+  z-index: -10;
+  position: relative;
+  margin-left: 20%;
+}
+  
+.title {
+  color: #e74c3c;
+  text-align: center;
+  justify-content: center;
+  font-size: 65px;
+  font-family: 'Righteous', cursive;
+  margin-top: 5px;
+}
+
+select {
+  font-family: 'Righteous', cursive;
+}
+
+.like {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10px;
+  align-items: center;
+  align-content: center;
+}
+
+.liked{
+  color: blue;
+}
+
+.disliked{
+  color: red;
+}

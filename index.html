@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!--<meta http-equiv="refresh" content="10" />-->
+    <link rel="stylesheet" href="public/index.css">
+    <script src="https://kit.fontawesome.com/fc284e331a.js" crossorigin="anonymous"></script>
+    <title>Forum</title>
+</head>
+
+<body>
+  <div class="title">The Forum</div>
+
+    <ul class="menu cf">
+        <li><a href="/log">Log In</a></li>
+        <li><a href="/message">Create your post</a></li>
+        <li><a href="/">Home</a></li>          				
+    </ul>
+
+    <form action="/category">
+      <label for="langage">Filter by category:</label>
+      <select id="langage" name="category_filter">
+        <option value="C++">C++</option>
+        <option value="Python">Python</option>
+        <option value="Javascript">Javascript</option>
+        <option value="GO">GO</option>
+      </select>
+      <input type="submit" value="Apply">
+    </form>
+    <br><br><br>
+
+    {{range .WebMessages}}
+      <div class="user-name">{{.Type}} : {{.Username}}</div>
+        <div class="arroundpost">
+          <div class="post">{{.Post}}</div>
+        </div>
+      <div class="like">
+        <button id="like_post{{.ID}}" class="likes" value="0" data-id=""><i class="fa-regular fa-thumbs-up"></i></button>
+        <button id="dislike_post{{.ID}}" class="dislikes" value="0"><i class="fa-regular fa-thumbs-down"></i></button>
+      </div>
+    {{end}}
+</body>
+
+<script>
+  const like = document.getElementById('like_post1');
+  const dislike = document.getElementById('dislike_post1');
+
+  like.addEventListener('click', function onClick() {
+    dislike.classList.remove("disliked");
+    like.classList.add("liked");
+    like.value = 1;
+    dislike.value = 0;
+  });
+
+  dislike.addEventListener('click', function onClick() {
+    dislike.classList.add("disliked");
+    like.classList.remove("liked");
+    dislike.value= 1;
+    like.value = 0;
+  });
+</script>
+
+</html>
